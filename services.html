@@ -56,17 +56,22 @@
                                 <li><i class="fas fa-check text-success me-2"></i>100GB Data</li>
                                 <li><i class="fas fa-check text-success me-2"></i>5G Access</li>
                             </ul>
-                            <a href="contact.html" class="btn btn-danger w-100" onclick="alloy('sendEvent', {
-     data: {
-       __adobe: {
-         target: {
-           profile: {
-             capturedintent: 'plan1'
+                            <a href="contact.html" class="btn btn-danger w-100" onclick="
+     event.preventDefault();
+     alloy('sendEvent', {
+       data: {
+         __adobe: {
+           target: {
+             profile: {
+               capturedintent: 'plan1'
+             }
            }
          }
        }
-     }
-   })">Get Started</a>
+     }).then(function () {
+       window.location.href = 'contact.html';
+     });
+   ">Get Started</a>
                         </div>
                     </div>
                 </div>
