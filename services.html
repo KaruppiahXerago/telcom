@@ -56,8 +56,17 @@
                                 <li><i class="fas fa-check text-success me-2"></i>100GB Data</li>
                                 <li><i class="fas fa-check text-success me-2"></i>5G Access</li>
                             </ul>
-                            <a href="contact.html" class="btn btn-danger w-100" mboxClick="servicesPlanClick" 
-   mboxParameter="planName=plan1">Get Started</a>
+                            <a href="contact.html" class="btn btn-danger w-100" onclick="alloy('sendEvent', {
+     data: {
+       __adobe: {
+         target: {
+           profile: {
+             capturedintent: 'plan1'
+           }
+         }
+       }
+     }
+   })">Get Started</a>
                         </div>
                     </div>
                 </div>
